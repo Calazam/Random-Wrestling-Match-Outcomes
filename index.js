@@ -71,9 +71,12 @@ if (condition === 'pinfall') {
 } else if (condition === 'submission') {
         method = wrassler.Submission
 }
-
-let move = method[Math.floor(Math.random() * method.length)]
-
+let move = undefined
+if (condition === 'pinfall' || condition === "submission") {
+        move = method[Math.floor(Math.random() * method.length)]
+} else {
+        move = ""
+}
 
 
 
